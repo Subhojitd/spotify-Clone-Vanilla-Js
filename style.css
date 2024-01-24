@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4a4a4a; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners of the thumb */
+  border: 3px solid #1e1e1e; /* Border around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #666666; /* Color of the thumb on hover */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1e1e1e; /* Color of the track */
+  border-radius: 6px; /* Rounded corners of the track */
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #333333; /* Color of the track on hover */
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #1e1e1e; /* Color of the scrollbar corner */
+}
+
+.main-container {
+  background: black;
+  color: #ffff;
+}
+
+/* Left Section  >>>>>>>>>>>>>>>>>>> */
+
+/* Logo & Home Logo */
+.left {
+  width: 25vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 8px;
+}
+
+.logo {
+  width: 25px;
+}
+.logo-text {
+  font-size: 23px;
+  letter-spacing: 2px;
+  margin-left: 5px;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+}
+
+.home-box {
+  height: 28%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background: #121212;
+  gap: 30px;
+  border-radius: 10px;
+}
+.home-box li {
+  list-style: none;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Library or Playlist part */
+.library-box {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  background: #121212;
+  border-radius: 10px;
+  padding: 30px;
+}
+.lib-logo-container {
+  display: flex;
+  gap: 10px;
+}
+
+/* Right Section */
+.right {
+  width: 75vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #121212;
+  border-radius: 10px;
+  margin-top: 8px;
+  margin-right: 10px;
+  padding: 20px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+
+.card {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #252525;
+  position: relative;
+}
+
+.card > * {
+  padding-top: 5px;
+}
+
+.card img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.card:hover {
+  background: #505050;
+  cursor: pointer;
+}
+
+.play {
+  width: 30px;
+  height: 30px;
+  background-color: orangered;
+  border-radius: 50%;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 155px;
+  right: 25px;
+}
+
+.login-signup > button {
+  border: none;
+  outline: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.signup {
+  background: black;
+  color: white;
+}
+
+.signup:hover {
+  background: rgb(86, 84, 84);
+  cursor: pointer;
+}
+
+.login {
+  background: #f14a0d;
+  color: white;
+}
+
+.login:hover {
+  cursor: pointer;
+  background: rgb(241, 124, 82);
+}
