@@ -92,7 +92,51 @@
 }
 .lib-logo-container {
   display: flex;
+  flex-direction: column;
   gap: 10px;
+}
+
+.lib-heading {
+  display: flex;
+  gap: 10px;
+}
+.songList ul {
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.songList {
+  height: 320px;
+  overflow: auto;
+}
+.songList ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid white;
+  padding: 15px 10px;
+  margin: 10px 0 0 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.songList ul li:hover {
+  background: rgb(52, 51, 51);
+}
+
+.music {
+  width: 30px;
+  height: 30px;
+  background-color: orangered;
+  border-radius: 50%;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Right Section */
@@ -106,6 +150,7 @@
   margin-top: 8px;
   margin-right: 10px;
   padding: 20px;
+  position: relative;
 }
 .header {
   display: flex;
@@ -183,4 +228,32 @@
 .login:hover {
   cursor: pointer;
   background: rgb(241, 124, 82);
+}
+
+.playbar {
+  position: fixed;
+  bottom: 17px;
+  width: 70vw;
+  background: #505050;
+  border-radius: 20px;
+  padding: 8px;
+}
+
+.songButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.playbtn {
+  width: 30px;
+  height: 30px;
+  background-color: orangered;
+  border-radius: 50%;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
