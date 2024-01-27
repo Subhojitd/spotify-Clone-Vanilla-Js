@@ -52,6 +52,7 @@
       <section class="right">
         <div class="header">
           <div class="nav">
+            <img class="hamburger" src="./assets/library-logo.svg" alt="" />
             <img src="./assets/left.svg" alt="" />
             <img src="./assets/right.svg" alt="" />
           </div>
@@ -97,28 +98,34 @@
         </section>
 
         <div class="playbar">
-          <div class="songInfo"></div>
+          <div class="infoContainer">
+            <div class="songInfo"></div>
 
-          <div class="songButtons">
-            <img
-              style="cursor: pointer"
-              src="./assets/prevBtn.svg"
-              alt="Previous-Button"
-            />
-            <img
-              class="playbtn"
-              id="playbtn"
-              src="./assets/play-btn.svg"
-              alt="Play-Buttton"
-            />
-            <img
-              style="cursor: pointer"
-              src="./assets/nextBtn.svg"
-              alt="Next-Button"
-            />
+            <div class="songButtons">
+              <img
+                style="cursor: pointer"
+                id="prev"
+                src="./assets/prevBtn.svg"
+                alt="Previous-Button"
+              />
+              <img
+                class="playbtn"
+                id="play"
+                src="./assets/play-btn.svg"
+                alt="Play-Buttton"
+              />
+              <img
+                id="next"
+                style="cursor: pointer"
+                src="./assets/nextBtn.svg"
+                alt="Next-Button"
+              />
+            </div>
+            <div class="songDuration"></div>
           </div>
-
-          <div class="songDuration"></div>
+          <div class="seekbar">
+            <div class="circle"></div>
+          </div>
         </div>
       </section>
     </main>
