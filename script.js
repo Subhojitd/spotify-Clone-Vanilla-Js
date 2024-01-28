@@ -16,7 +16,7 @@ function secondsToMinutes(seconds) {
 }
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`/${folder}/`);
+  let a = await fetch(`${folder}/`);
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -26,7 +26,7 @@ async function getSongs(folder) {
   for (let i = 0; i < as.length; i++) {
     const el = as[i];
     if (el.href.endsWith(".mp3")) {
-      songs.push(el.href.split(`/${folder}/`)[1]); // Store the URL instead of the <a> element
+      songs.push(el.href.split(`/${folder}/`)[1]);
     }
   }
   //show all songs in the  playlist
@@ -82,7 +82,7 @@ async function disPlayAlbums() {
   let array = Array.from(anchors);
   for (let i = 0; i < array.length; i++) {
     const e = array[i];
-    if (e.href.includes("/songs/") && !e.href.includes(".htaccess")) {
+    if (e.href.includes("/songs/")) {
       // console.log(e.href);
       let folder = e.href.split("/").slice(-2)[1];
       console.log(folder);
