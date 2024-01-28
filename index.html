@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="utils.css" />
   </head>
   <body>
-    <main class="main-container flex">
+    <main class="main-container" style="display: flex">
       <!-- Left Section -->
       <section class="left">
         <!-- Logo & Home Box-->
+        <div class="close">
+          <img width="30" src="./assets/back.svg" alt="" />
+        </div>
         <div class="home-box">
           <!-- Logo Container -->
           <div class="logo-container">
-            <div class="flex">
+            <div style="display: flex">
               <img class="logo" src="./assets/logo.png" alt="logo" />
               <p class="logo-text">eat-burst</p>
             </div>
@@ -68,60 +71,50 @@
           <h1 style="padding: 10px">BeatBurst Playlists</h1>
 
           <!-- CARDS   -->
-          <div class="cardContainer">
-            <div class="card">
-              <div class="play">
-                <img src="./assets/play.svg" alt="" />
-              </div>
-
-              <img
-                src="https://static.vecteezy.com/system/resources/thumbnails/021/693/323/small/a-logo-for-a-music-company-that-is-made-by-song-brand-vector.jpg"
-                alt="image"
-              />
-              <h2>Happy Hits</h2>
-              <p>Feels great of hearing this and enjoying much !</p>
-            </div>
-
-            <div class="card">
-              <div class="play">
-                <img src="./assets/play.svg" alt="" />
-              </div>
-
-              <img
-                src="https://static.vecteezy.com/system/resources/thumbnails/021/693/323/small/a-logo-for-a-music-company-that-is-made-by-song-brand-vector.jpg"
-                alt="image"
-              />
-              <h2>Happy Hits</h2>
-              <p>Feels great of hearing this and enjoying much !</p>
-            </div>
-          </div>
+          <div class="cardContainer"></div>
         </section>
 
+        <!-- playbar -->
         <div class="playbar">
           <div class="infoContainer">
             <div class="songInfo"></div>
 
-            <div class="songButtons">
-              <img
-                style="cursor: pointer"
-                id="prev"
-                src="./assets/prevBtn.svg"
-                alt="Previous-Button"
-              />
-              <img
-                class="playbtn"
-                id="play"
-                src="./assets/play-btn.svg"
-                alt="Play-Buttton"
-              />
-              <img
-                id="next"
-                style="cursor: pointer"
-                src="./assets/nextBtn.svg"
-                alt="Next-Button"
-              />
+            <div class="vol-song-btn">
+              <div class="songButtons">
+                <img
+                  style="cursor: pointer"
+                  id="prev"
+                  src="./assets/prevBtn.svg"
+                  alt="Previous-Button"
+                />
+                <img
+                  class="playbtn"
+                  id="play"
+                  src="./assets/play-btn.svg"
+                  alt="Play-Buttton"
+                />
+                <img
+                  id="next"
+                  style="cursor: pointer"
+                  src="./assets/nextBtn.svg"
+                  alt="Next-Button"
+                />
+              </div>
             </div>
-            <div class="songDuration"></div>
+            <div class="volContainer">
+              <div class="songDuration"></div>
+              <span> | </span>
+              <img
+                class="volume"
+                style="cursor: pointer"
+                width="20"
+                src="./assets/volume.svg"
+                alt=""
+              />
+              <div class="range">
+                <input type="range" name="volume" />
+              </div>
+            </div>
           </div>
           <div class="seekbar">
             <div class="circle"></div>

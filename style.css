@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+:root {
+  --a: 0;
+}
 ::-webkit-scrollbar {
   width: 12px; /* Width of the scrollbar */
 }
@@ -48,6 +51,12 @@
   margin: 8px;
 }
 
+.close {
+  display: none;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
 .logo {
   width: 25px;
 }
@@ -83,7 +92,7 @@
 /* Library or Playlist part */
 .library-box {
   width: 100%;
-  height: 75%;
+  height: 70.5%;
   display: flex;
   flex-direction: column;
   background: #121212;
@@ -109,7 +118,7 @@
 }
 
 .songList {
-  height: 320px;
+  height: 338px;
   overflow: auto;
 }
 .songList ul li {
@@ -178,6 +187,7 @@
   border-radius: 5px;
   background: #252525;
   position: relative;
+  transition: all 0.9s ease-in-out;
 }
 
 .card > * {
@@ -193,6 +203,7 @@
 .card:hover {
   background: #505050;
   cursor: pointer;
+  --a: 1;
 }
 
 .play {
@@ -207,6 +218,16 @@
   position: absolute;
   top: 155px;
   right: 25px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  opacity: var(--a);
+}
+
+.login-signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .login-signup > button {
@@ -239,11 +260,11 @@
 }
 
 .playbar {
-  height: 65px;
+  min-height: 65px;
   position: fixed;
   bottom: 17px;
   width: 70vw;
-  background: #232323;
+  background: #3b3b3b;
   border-radius: 15px;
   padding: 8px;
   display: flex;
@@ -251,6 +272,9 @@
   justify-content: center;
   flex-direction: column;
   gap: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .songButtons {
@@ -258,6 +282,36 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
+}
+
+.vol-song-btn {
+  width: 300px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.volContainer {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  gap: 8px;
+}
+.volContainer input {
+  width: 60px;
+  cursor: pointer;
+}
+.songInfo {
+  width: 250px;
+  height: 15px;
+  text-align: center;
+}
+.songDuration {
+  width: 120px;
 }
 
 .playbtn {
@@ -275,7 +329,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 0 30px;
   font-size: 13px;
 }
@@ -302,6 +356,7 @@
 .hamburger {
   display: none;
   width: 40px;
+  cursor: pointer;
 }
 
 /* Midea Query >>>>>>>>>>> */
@@ -310,17 +365,42 @@
   .left {
     position: absolute;
     left: -100%;
-    transition: all 3s;
+    transition: all 0.3s;
     z-index: 1;
-    width: 233px;
+    background: #000;
+    margin: 2px;
+    width: 350px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
-
+  .home-box,
+  .library-box {
+    background: #1e1e1e;
+  }
   .right {
     width: 100vw;
+    margin: 0;
   }
-
+  .infoContainer {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
   .playbar {
-    width: 92vw;
+    width: 90vw;
+  }
+  .cardContainer {
+    /* max-height: unset;
+    overflow-y: unset; */
+    margin-bottom: 35vh;
+  }
+  .close {
+    display: block;
+  }
+  .card {
+    width: 380px;
   }
 
   .hamburger {
