@@ -325,6 +325,9 @@
   justify-content: center;
   cursor: pointer;
 }
+.playbtn:hover {
+  background-color: #fc2600;
+}
 .infoContainer {
   width: 100%;
   display: flex;
